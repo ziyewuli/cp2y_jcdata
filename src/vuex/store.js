@@ -15,7 +15,11 @@ const state = {
   'menus': uz.NAME_TITILE,
   'menuShow': false,
   'loadingShow': false,
-  'news': 5
+  'news': 5,
+  'footerTitle': '首页',
+  'footerMenus': uz.FOOTERNAME_TITILE,
+  'footerMenuShow': false,
+  'token': false
 };
 // 创建一个对象存储一系列我们接下来要写的 mutation 函数
 const mutations = {
@@ -23,6 +27,10 @@ const mutations = {
   UPDATE_TITLE(state, title) {
     console.log(title);
     state.headerTitle = title;
+  },
+  UPDATE_FOOTERTITLE(state, title) {
+    console.log(title);
+    state.footerTitle = title;
   },
   UPDATE_MENUSHOW(state) {
     state.menuShow = !state.menuShow;
@@ -32,6 +40,9 @@ const mutations = {
   },
   UPDATE_NEWS(state) {
     state.news = 0;
+  },
+  UPDATE_token(state,data) {
+    state.token = data;
   }
 };
 

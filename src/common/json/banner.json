@@ -1,0 +1,23 @@
+{
+    "code": 100,
+    "success": true,
+    "resultMsg": null,
+    "data": [
+        [
+            "1052",
+            "新注册红包",
+            "1",
+            "/app/images/banner/banner20.png",
+            "clb://clb.yztz.cn/greenhand?activityId=1",
+            "/app/index.html#/actPacket?activityId=1"
+        ],
+        [
+            "1050",
+            "一分钟介绍",
+            "1",
+            "/app/images/banner/banner14.png",
+            "",
+            "/app/index.html#/introduce"
+        ]
+    ]
+}

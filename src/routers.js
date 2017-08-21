@@ -15,6 +15,14 @@ const routers = [{
   },
   children: [
     {
+      path: '/oneyuan',
+      name: 'oneyuan',
+      component(resolve) {
+        require.ensure(['./components/oneyuan/oneyuan.vue'], () => {
+          resolve(require('./components/oneyuan/oneyuan.vue'));
+        });
+      }
+    }, {
       path: '/welfare',
       name: 'welfare',
       component(resolve) {
@@ -59,6 +67,54 @@ const routers = [{
     }
   ]
 },
+  {
+    path: '/clbindex',
+    name: 'clbindex',
+    component(resolve) {
+      require.ensure(['./components/clb/clbindex.vue'], () => {
+        resolve(require('./components/clb/clbindex.vue'));
+      });
+    }
+  },
+  {
+    path: '/clbnews',
+    name: 'clbnews',
+    component(resolve) {
+      require.ensure(['./components/clb/clbnews.vue'], () => {
+        resolve(require('./components/clb/clbnews.vue'));
+      });
+    }
+  },
+  {
+    path: '/clbmyHome',
+    name: 'clbmyHome',
+    meta: {
+      requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
+    },
+    component(resolve) {
+      require.ensure(['./components/clb/clbmyHome.vue'], () => {
+        resolve(require('./components/clb/clbmyHome.vue'));
+      });
+    }
+  },
+  {
+    path: '/clblogin',
+    name: 'clblogin',
+    component(resolve) {
+      require.ensure(['./components/clb/clblogin.vue'], () => {
+        resolve(require('./components/clb/clblogin.vue'));
+      });
+    }
+  },
+  {
+    path: '/clbregister1',
+    name: 'clbregister1',
+    component(resolve) {
+      require.ensure(['./components/clb/clbregister1.vue'], () => {
+        resolve(require('./components/clb/clbregister1.vue'));
+      });
+    }
+  },
   {
     path: '/wecome',
     name: 'wecome',
